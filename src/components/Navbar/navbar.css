@@ -1,59 +1,14 @@
-.container{
-    background: #2c2c6c;
-    width: max-content;
-    display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
-    position: fixed;
-    left:50%;
-    transform: translate(-50%);
-    
-    display: flex;
-    gap:0.8rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(15px);
-}
-.container a{
-    background: transparent;
-    padding: 0.9rem;
-    border-radius: 50%;
-    display: flex;
-    color: #4db5ff;
-    font-size: 1.1rem;
+
+a{
+    text-decoration:none;
+    color:white;
+    background: linear-gradient(to left, rgb(114, 114, 250) 50%, lightblue 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
 
 }
-.container a:hover{
+a:hover{
+    background-position:left
 
-    background: rgba(0, 0, 0, 0.3);
-    animation: rubberBand; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
-}
-.container a.active{
-
-    background: #4db5ff;
-    color: #2c2c6c;
-}
-.icons{
-    margin-top:8px;
-    padding-left: 10px;
-    
-    
-
-
-}
-.animation a:hover{
-    animation: rubberBand; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1s;
-
-
-}
-.App{
-    padding:4rem;
-
-}
-.App-logo{
-
-    height:40vmin;
-    pointer-events:none;
 
 }

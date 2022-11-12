@@ -9,7 +9,7 @@ function App()  {
   return (
     <div className="App">
       <Router>
-      <Navbar2/>
+      <Navbar/>
 
       <Routes>
       <Route path='/' exact element={<Home />} />

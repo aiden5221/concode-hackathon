@@ -8,18 +8,22 @@ import { Quizzes } from '../Quizzes/quizzes'
 
 export const Home = () => {
   return (
-    <div className='home'>
+    <div>
       <div className='headerContainer' > 
       <h1> Untitled Application </h1>
       <p> Welcome to Our Online Educational Resource</p>
       
       </div>
-      
+
+      <div>
       <Preschool/>
       <Dictionary/>
       <Quizzes/>
       <Thesaurus/>
-    </div>
+      </div>
+
+      </div>
+    
     
     
     

@@ -1,6 +1,5 @@
-import { Button } from '@mui/material'
 import React from 'react'
-import { Carousel0 } from 'react-responsive-carousel'
+import 'animate.css'
 
 import './preschool.css'
 
@@ -10,10 +9,10 @@ export const Preschool = () => {
       
 
       <div className='preschool-container'>
-          <h1> Interactive Preschool Learning Tool </h1>
-          <div className='btn'>
-          <Button variant="outlined" >  Audio Learning  </Button> 
-          </div>
+          <h1 className='animation'> A Complete Learning Experience </h1>
+          <p className='animation'>Try out one of our many services</p>
+          
+          
           
           
 

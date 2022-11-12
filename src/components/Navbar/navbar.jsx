@@ -1,24 +1,31 @@
-import React from 'react'
-import 'animate.css'
-
-import {TbMoodKid} from 'react-icons/tb'
-import {AiFillHome} from 'react-icons/ai'
-import {MdQuiz} from 'react-icons/md'
-import{BsBookHalf} from 'react-icons/bs'
-import{BsBookFill} from 'react-icons/bs'
-import {Link} from 'react-router-dom'
-
+import { AppBar,Toolbar, IconButton, Typography,Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
+import {BsBook} from 'react-icons/bs'
+import { Button } from '@mui/material';
 import './navbar.css'
-
 export const Navbar = () => {
   return (
-    <div className='container'>
-        <Link to='/' className='animation'> Home <AiFillHome className='icons' /> </Link>
-        <Link to='/quizzes' className='animation' >Quizzes <MdQuiz className='icons'/> </Link>
-        <Link to='/dictionary' className='animation' >Dictionary <BsBookFill className='icons'/>  </Link>
-        <Link to=' thesauraus' className='animation'> Thesaurus <BsBookHalf className='icons'/> </Link>
-        <Link to='/preschool'className='animation'>Preschool Learning Assistant <TbMoodKid className='icons'/></Link>
+    
+    <AppBar position ='static'>
+        <Toolbar> 
+          <IconButton size ='large' edge='start' color='inherit' aria-label='logo'>
+            <BsBook/>
+          </IconButton>
+          <Typography variant='h6' component='div' sx= {{flexGrow:1}}>
+            Untitled Project
+          </Typography>
+          <Stack direction= 'row' spacing={2}>
 
-    </div>
+            <Link to="/" color='inherit'><Button variant='outlined' color='inherit'>Home</Button></Link>
+            <Link to="/quizzes" color='inherit'><Button variant='outlined' color='inherit'>Quizzes</Button></Link>
+            <Link to="/dictionary" color='inherit'><Button variant='outlined' color='inherit'>Dictionary</Button></Link>
+            <Link to="/thesururs" color='inherit'><Button variant='outlined' color='inherit'>Thesaurus</Button></Link>
+          </Stack>
+        </Toolbar>
+
+    </AppBar>
+
+
+
   )
 }
