@@ -2,16 +2,7 @@
   color: red;
   /* background-color: blue */
 }
-/* 
-#searchBtn {
-  color: blue;
-  height: 40px;
-  width: 60px;
-  border: skyblue 5px solid;
-  border-radius: 0.5rem;
- 
-  box-shadow: 0px 3px 2px white; 
-  cursor: pointer;
-  padding: 0;
 
-} */
+#searchBtn {
+  margin-left: 5px
+}

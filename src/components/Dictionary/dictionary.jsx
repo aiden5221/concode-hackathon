@@ -57,7 +57,8 @@ export const Dictionary = () => {
     
     <div className="mainDic"> 
       
-      <h1> Integrated Word Finder</h1>
+      {/* <h1> Integrated Word Finder</h1> */}
+      <h1>Dictionary</h1>
     
       <div className="searchBar">
       <div
@@ -72,18 +73,11 @@ export const Dictionary = () => {
       <TextField id="outlined-basic" label="Search" variant="outlined" placeholder="Search the word..." onChange = { e => setSearchWord(e.target.value)}/>
       <Button id="searchBtn" variant="contained" size="large" onClick = {() => translate()}>
           {/* Search */}
-          <MdSearch />
+          <MdSearch size= "38px"/>
         </Button>
     
-      {/* <SearchIconWrapper id="searchBtn" ><SearchIcon onClick = {() => translate()}/></SearchIconWrapper> */}
-   
-        {/* </Search> */}
-      
     </div>
-      {/* <input id= "filled-basic" type="text" placeholder="Search the word..." onChange = { e => setSearchWord(e.target.value)} />
-        <button onClick = {() => translate()}>
-          <MdSearch size="10 px" />
-        </button> */}
+      
       </div>
      
        {result && (
