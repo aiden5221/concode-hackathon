@@ -10,7 +10,6 @@ import IconButton from '@mui/material/IconButton';
 import { styled, alpha } from '@mui/material/styles';
 import './dictionary.css'
 
-import { OutlinedInput } from '@mui/material';
 
 export const Dictionary = () => {
   const [result, setData] = useState("");
@@ -23,32 +22,6 @@ export const Dictionary = () => {
     })
   }
 
-  // const Search = styled('div')(({ theme }) => ({
-  //   position: 'relative',
-  //   borderRadius: theme.shape.borderRadius,
-  //   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  //   '&:hover': {
-  //     backgroundColor: alpha(theme.palette.common.white, 0.25),
-  //   },
-  //   marginRight: theme.spacing(2),
-  //   marginLeft: 0,
-  //   width: '100%',
-  //   [theme.breakpoints.up('sm')]: {
-  //     marginLeft: theme.spacing(3),
-  //     width: 'auto',
-  //   },
-  // }));
-
-  // const SearchIconWrapper = styled('div')(({ theme }) => ({
-  //   color: 'inherit',
-  //   padding: theme.spacing(0, 2),
-  //   height: '100%',
-  //   position: 'absolute',
-  //   pointerEvents: 'none',
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // }));
 
  
   
@@ -70,10 +43,11 @@ export const Dictionary = () => {
       autoComplete="off"
     >
       {/* <Search> */}
-      <TextField id="outlined-basic" label="Search" variant="outlined" placeholder="Search the word..." onChange = { e => setSearchWord(e.target.value)}/>
+      <TextField id="outlined-basic searchTextField" label="Search" variant="outlined" placeholder="Search the word..." onChange = { e => setSearchWord(e.target.value)}/>
       <Button id="searchBtn" variant="contained" size="large" onClick = {() => translate()}>
           {/* Search */}
           <MdSearch size= "38px"/>
+          {/* <SearchIcon size= "78px"/> */}
         </Button>
     
     </div>
