@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
 import { styled, alpha } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
@@ -15,6 +16,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
+import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 import './dictionary.css'
 
 
@@ -26,7 +29,7 @@ export const Dictionary = () => {
 
     axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`).then( (response) => {
       setData(response.data[0]);
-    })
+    }).catch((error) => console.error(error));
   }
 
   const Div = styled('div')(({ theme }) => ({
@@ -62,7 +65,7 @@ export const Dictionary = () => {
       
       </div>
      
-       {/* {result && (
+       {/* {result ? (
        <div className="resultList">
         <h2 id="word">
           {result.word}{" "}
@@ -73,9 +76,25 @@ export const Dictionary = () => {
         <h4>Example:</h4>
         <p>{result.meanings[0].definitions[0].examples}</p>
        </div>
-      )}  */}
- 
-      {result && (
+    
+      ) : (<p> Ops </p>)}  */}
+{/* 
+      {result ? (
+        <div className="resultList">
+        <h2 id="word">
+          {result.word}{" "}
+        </h2>
+        <p>{result.phonetic}</p>
+        <h4>Definitions:</h4>
+        <p>{result.meanings[0].definitions[0].definition}</p>
+        <h4>Example:</h4>
+        <p>{result.meanings[0].definitions[0].examples}</p>
+       </div>
+       ) else {
+        <p> Ops, no word...</p>
+      } */}
+ {/* <p> ============== </p> */}
+      {result ? (
         
        <div className="resultList">
           <h2 id="word">{result.word}{" "}</h2>
@@ -143,7 +162,12 @@ export const Dictionary = () => {
        </div>
       
      
-      )} 
+      ) : (
+        <Grid container sx={{ color: 'skyblue' }} fontsize="large" id="bookIcon">
+        <LocalLibraryIcon fontsize="large"/>
+        </Grid>
+    )
+      }
   
      </div>
   )
