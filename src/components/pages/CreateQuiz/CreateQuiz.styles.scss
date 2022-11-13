@@ -1,0 +1,21 @@
+.answer-text {
+    margin-bottom: 2% !important;
+}
+
+.form-container{
+    border-radius: 25px;
+    border: 2px solid gray;
+    padding: 2%;
+    width: 50%;
+    margin:auto;
+}
+
+.questions-count-container{
+    display:flex;
+
+    .questions-controls{
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+}
