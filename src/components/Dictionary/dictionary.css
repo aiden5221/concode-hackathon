@@ -29,6 +29,7 @@
   align-items: center;
   width: 100%;
   text-align: center;
+  z-index: 20
 }
 #searchBtn {
   margin-left: 5px
@@ -66,8 +67,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  resize: 100px;
   margin-top: 20px;
   height: 100px
 
 }
+
+.bookIconClass {
+  padding-top: 20px;
+  transform: scale(15);
+  z-index: 0
+}
+
