@@ -1,0 +1,17 @@
+.mainDic {
+  color: red;
+  /* background-color: blue */
+}
+.searchBar > button {
+
+  background-color: white;
+  height: 40px;
+  width: 60px;
+  border: skyblue 5px solid;
+  border-radius: 0.5rem;
+  color: blue;
+  box-shadow: 0px 3px 2px white;
+  cursor: pointer;
+  padding: 0;
+
+}
