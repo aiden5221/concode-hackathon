@@ -1,0 +1,17 @@
+.thesarurus-container {
+    text-align: center;
+ 
+   
+
+}
+.card-container{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}

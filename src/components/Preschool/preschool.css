@@ -1,16 +1,13 @@
 .preschool-container{
 
-  padding-left: 10rem;
-
+text-align: center;
 
 }
 .preschool-container p{
   font-size: 18px;
-  font-weight: bold
+  font-weight: bold;
 
-}
-.animation{
-  animation: rubberBand;
-  animation-delay: 2s;
+  
+  text-align:  center;
 
 }
