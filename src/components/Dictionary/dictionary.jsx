@@ -14,7 +14,7 @@ import './dictionary.css'
 export const Dictionary = () => {
   const [result, setData] = useState("");
   const [ searchWord, setSearchWord ] = useState("");
-
+ 
   function translate () {
 
     axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`).then( (response) => {
@@ -22,19 +22,18 @@ export const Dictionary = () => {
     })
   }
 
-
- 
-  
-
   return (
     
     <div className="mainDic"> 
       
       {/* <h1> Integrated Word Finder</h1> */}
+      <header className="header">
       <h1>Dictionary</h1>
+      </header>
+      
     
       <div className="searchBar">
-      <div
+        <div
       component="form"
       sx={{
         '& > :not(style)': { m: 1, width: '25ch' },
@@ -42,25 +41,24 @@ export const Dictionary = () => {
       noValidate
       autoComplete="off"
     >
-      {/* <Search> */}
-      <TextField id="outlined-basic searchTextField" label="Search" variant="outlined" placeholder="Search the word..." onChange = { e => setSearchWord(e.target.value)}/>
+
+      <TextField id="outlined-basic searchTextField" label="Search" variant="outlined" placeholder="Search the word..."  onChange = { e => setSearchWord(e.target.value)}/>
       <Button id="searchBtn" variant="contained" size="large" onClick = {() => translate()}>
-          {/* Search */}
           <MdSearch size= "38px"/>
-          {/* <SearchIcon size= "78px"/> */}
         </Button>
     
-    </div>
+        </div>
       
       </div>
      
        {result && (
        <div className="resultList">
-        <h2>
+        <h2 id="word">
           {result.word}{" "}
         </h2>
   
         <p>{result.phonetic}</p>
+        
 
         <h4>Definitions:</h4>
         <p>{result.meanings[0].definitions[0].definition}</p>

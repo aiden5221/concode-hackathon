@@ -1,12 +1,49 @@
 .mainDic {
-  color: red;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   /* background-color: blue */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
+.header {
+  color: black;
+  font-size: 30px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.searchBar {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
 #searchBtn {
   margin-left: 5px
 }
 
 #searchTextField {
   font-size: 100px;
+}
+
+.resultList {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+#word {
+  font-size: 60px
 }
