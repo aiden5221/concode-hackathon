@@ -23,32 +23,32 @@ export const Dictionary = () => {
     })
   }
 
-  const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-  }));
+  // const Search = styled('div')(({ theme }) => ({
+  //   position: 'relative',
+  //   borderRadius: theme.shape.borderRadius,
+  //   backgroundColor: alpha(theme.palette.common.white, 0.15),
+  //   '&:hover': {
+  //     backgroundColor: alpha(theme.palette.common.white, 0.25),
+  //   },
+  //   marginRight: theme.spacing(2),
+  //   marginLeft: 0,
+  //   width: '100%',
+  //   [theme.breakpoints.up('sm')]: {
+  //     marginLeft: theme.spacing(3),
+  //     width: 'auto',
+  //   },
+  // }));
 
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
-    color: 'inherit',
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }));
+  // const SearchIconWrapper = styled('div')(({ theme }) => ({
+  //   color: 'inherit',
+  //   padding: theme.spacing(0, 2),
+  //   height: '100%',
+  //   position: 'absolute',
+  //   pointerEvents: 'none',
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // }));
 
  
   
@@ -68,15 +68,16 @@ export const Dictionary = () => {
       noValidate
       autoComplete="off"
     >
-      <Search>
+      {/* <Search> */}
       <TextField id="outlined-basic" label="Search" variant="outlined" placeholder="Search the word..." onChange = { e => setSearchWord(e.target.value)}/>
-      {/* <button onClick = {() => translate()}>
-          <MdSearch size="10 px" />
-        </button> */}
-      {/* <button id="searchBtn" onClick = {() => translate()}> */}
-      <SearchIconWrapper id="searchBtn" ><SearchIcon onClick = {() => translate()}/></SearchIconWrapper>
-        {/* </button> */}
-        </Search>
+      <Button id="searchBtn" variant="contained" size="large" onClick = {() => translate()}>
+          {/* Search */}
+          <MdSearch />
+        </Button>
+    
+      {/* <SearchIconWrapper id="searchBtn" ><SearchIcon onClick = {() => translate()}/></SearchIconWrapper> */}
+   
+        {/* </Search> */}
       
     </div>
       {/* <input id= "filled-basic" type="text" placeholder="Search the word..." onChange = { e => setSearchWord(e.target.value)} />
