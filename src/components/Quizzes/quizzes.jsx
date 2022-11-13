@@ -8,10 +8,6 @@ export const Quizzes = () => {
         <div className= 'quiz-container' >
 
         <h1>Create Your Own Quizzes</h1>
-        
-
-
-
      
 
         </div>

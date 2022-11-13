@@ -1,4 +1,5 @@
 import { TextField, Typography, Box, Select, MenuItem, FormControl, InputLabel, Divider, Button } from "@mui/material";
+import React, { Component }  from 'react';
 import { useState } from "react";
 import { ControlPoint, RemoveCircleOutline } from '@mui/icons-material';
 import Question from "../../Question/Question.component";
