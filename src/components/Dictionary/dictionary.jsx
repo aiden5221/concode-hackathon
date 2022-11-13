@@ -1,17 +1,17 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import { MdSearch } from 'react-icons/md';
 import './dictionary.css'
 
 export const Dictionary = () => {
-  const [data, setData] = useState("");
+  const [result, setData] = useState("");
   const [ searchWord, setSearchWord ] = useState("");
 
   function translate () {
 
-    Axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`).then( (response) => {
+    axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`).then( (response) => {
       setData(response.data[0]);
     })
   }
@@ -24,11 +24,36 @@ export const Dictionary = () => {
         <button onClick = {() => translate()}>
           <MdSearch size="10 px" />
         </button>
-
       </div>
-      <p class="main">Test!</p>
-      <Button>Search</Button>
-    
+
+      {result && (
+       <div className="resultList">
+        <h2>
+          {result.word}{" "}
+        </h2>
+        {/* <p4>Phonetic:</p4> */}
+        <p>{result.phonetic}</p>
+
+        <h4>Definitions:</h4>
+        <p>{result.meanings[0].definitions[0].definition}</p>
+        <p>{result.meanings[0].definitions[1].definition}</p>
+        <p>{result.meanings[0].definitions[2].definition}</p>
+        <h4>Example:</h4>
+        <p>{result.meanings[0].definitions[0].examples}</p>
+        <p>{result.meanings[0].definitions[1].examples}</p>
+        <p>{result.meanings[0].definitions[2].examples}</p>
+
+       </div>
+
+      )} 
+      {/* { !result && (
+        <div className="resultList">
+        <h4>
+          There is no such word in this dictionary
+        </h4>
+       </div>
+ 
+      )} */}
      </div>
   )
 }
