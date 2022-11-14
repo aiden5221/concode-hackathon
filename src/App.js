@@ -1,19 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import CreateQuiz from "./components/pages/CreateQuiz/CreateQuiz";
 import ViewQuiz from "./components/pages/ViewQuiz/ViewQuiz";
 import ViewQuizzes from "./components/pages/ViewQuizzes/ViewQuizzes";
 import { Routes, Route } from "react-router-dom";
 =======
+=======
+>>>>>>> parent of 176e31d (Merge branch 'master' into homepaged)
 import React, { Component } from "react";
 import {Home} from './components/Home/home'
 import {Navbar} from './components/Navbar/navbar'
 import { Navbar2 } from "./components/Navbar/navbar2";
 import {BrowserRouter as Router, Route,Routes} from 'react-router-dom'
 import './index.css'
+<<<<<<< HEAD
+>>>>>>> parent of 176e31d (Merge branch 'master' into homepaged)
+=======
 >>>>>>> parent of 176e31d (Merge branch 'master' into homepaged)
 
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Routes>
       <Route path='/createQuiz' element={<CreateQuiz/>}/> 
@@ -22,6 +29,8 @@ function App() {
     </Routes>
   ); 
 =======
+=======
+>>>>>>> parent of 176e31d (Merge branch 'master' into homepaged)
     <div className="App">
       <Router>
       <Navbar/>
@@ -35,6 +44,9 @@ function App() {
       
     </div>
   );
+<<<<<<< HEAD
+>>>>>>> parent of 176e31d (Merge branch 'master' into homepaged)
+=======
 >>>>>>> parent of 176e31d (Merge branch 'master' into homepaged)
 }
 
